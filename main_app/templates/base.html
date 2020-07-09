@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Budget</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <ul>
+          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;BUDGET</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="{% url 'budgets_create' %}">Create A Budget</a></li>
+          <li><a href="{% url 'index' %}">View My Budgets</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer class="page-footer">
+    <div class="footer">
+        <h3>J-MO</h3>
+    </div>
+  </footer>
+</body>
+</html>

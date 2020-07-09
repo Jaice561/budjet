@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>My Budget List</h1>
+
+{% for budget in budgets %}
+  <div class="card">
+    <a href="{% url 'detail' budget.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ budget.month }}</span>
+    </div>
+    </a>
+  </div>
+{% endfor %}
+
+{% endblock %}
